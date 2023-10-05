@@ -13,10 +13,11 @@ import Express from '../assets/express.png'
 
 const Skills = () => {
   return (
-    <div className='w-full h-full bg-[#0a192f] text-gray-300 pt-[80px] '>
-        <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full'>
+    <div className='w-full h-full bg-[#0a192f] text-gray-300'>
+        <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+            
             <div className='my-4'>
-                <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Skills</p>
+                <p className='text-4xl font-bold inline underline decoration-pink-600 decoration-4'>Skills</p>
             </div>
         
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-4'>

@@ -8,7 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import CV from "../assets/SanchezdeBustamanteResume.pdf"
+import CV from "../assets/SanchezdeBustamanteResume.pdf";
 import logo2 from "../assets/SdeBlogo.png";
 
 const NavBar = () => {
@@ -26,14 +26,24 @@ const NavBar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        <li className="mx-4 cursor-pointer text-[17px] hover:underline hover:decoration-pink-600">Home</li> 
-        <li className="mx-4 cursor-pointer text-[17px] hover:underline hover:decoration-pink-600">Skills</li>
-        <li className="mx-4 cursor-pointer text-[17px] hover:underline hover:decoration-pink-600">Projects</li>
-        <li className="mx-4 cursor-pointer text-[17px] hover:underline hover:decoration-pink-600">Contact</li>
+        <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
+          Home
+        </li>
+        <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
+          Skills
+        </li>
+        <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
+          Projects
+        </li>
+        <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
+          Contact
+        </li>
       </ul>
 
-      
-      <div className="md:hidden z-10 mr-4 cursor-pointer" onClick={() => setNav(!nav)}>
+      <div
+        className="md:hidden z-10 mr-4 cursor-pointer"
+        onClick={() => setNav(!nav)}
+      >
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
@@ -45,20 +55,87 @@ const NavBar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <li className="my-6 text-4xl cursor-pointer"> Home </li>
-        <li className="my-6 text-4xl cursor-pointer"> Skills </li>
-        <li className="my-6 text-4xl cursor-pointer"> Projects </li>
-        <li className="my-6 text-4xl cursor-pointer"> Contact </li>
+        <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
+          {" "}
+          Home{" "}
+        </li>
+        <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
+          {" "}
+          Skills{" "}
+        </li>
+        <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
+          {" "}
+          Projects{" "}
+        </li>
+        <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
+          {" "}
+          Contact{" "}
+        </li>
+
+        <div className="w-full fixed bottom-0 pb-4">
+          <ul className="flex w-full justify-around">
+            <li className="flex justify-center items-center bg-blue-600 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl">
+              <a
+                className="flex justify-between items-center w-full text-gray-300"
+                href="https://www.linkedin.com/in/santiago-a-sanchez-de-bustamante-9116531a2/"
+                target="_blank"
+              >
+                <FaLinkedin size={45} />
+              </a>
+            </li>
+            
+            <li className="flex justify-between items-center bg-[#333333] p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl">
+            <a
+              className="flex justify-between items-center w-full text-gray-300 duration-300"
+              href="https://github.com/santiagosdeb"
+              target="_blank"
+            >
+              <FaGithub size={45} />
+            </a>
+          </li>
+
+          <li className="flex justify-between items-center bg-red-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl">
+            <a
+              className="flex justify-between items-center w-full text-gray-300 duration-300"
+              href="mailto:santiagosanchezdeb@gmail.com"
+              // aca puedo meter un link a la seccion "Contact"
+              target="_blank"
+            >
+              <HiOutlineMail size={45} />
+            </a>
+          </li>
+
+          <li className="flex justify-between items-center bg-green-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl">
+            <a
+              className="flex justify-between items-center w-full text-gray-300 duration-300"
+              href="https://wa.me/message/4VBSTH54ZKIAD1"
+              target="_blank"
+            >
+              <FaWhatsapp size={45} />
+            </a>
+          </li>
+
+          <li className="flex justify-between items-center bg-[#565f69] p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl">
+            <a
+              className="flex justify-between items-center w-full text-gray-300 duration-300"
+              href={CV}
+              target="_blank"
+            >
+              <FaFileAlt size={45} />
+            </a>
+          </li>
+
+          </ul>
+        </div>
       </ul>
       {/* Menu on smaller devices */}
-      
+
       {/* Social Media */}
       <div className="hidden xl:flex fixed flex-col top-[35%] left-0">
         <ul
           onMouseEnter={() => setShowSpan(true)}
           onMouseLeave={() => setShowSpan(false)}
         >
-
           <li className="flex justify-between items-center bg-blue-600 p-2 cursor-pointer hover:scale-105 duration-300">
             <a
               className="flex justify-between items-center w-full text-gray-300 duration-300"
@@ -137,7 +214,6 @@ const NavBar = () => {
         </ul>
       </div>
       {/* Social Media */}
-
     </div>
   );
 };
