@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import FoodRecipe from "../assets/FoodRecipes.png";
 import Videogames from "../assets/Videogames.png";
+import SportPlanet from "../assets/SportPlanet.jpeg";
+import Context from "../context/context";
 
 const Projects = () => {
+
+  const { getProjects, projects } = useContext(Context)
+
+  useEffect(()=>{
+    getProjects()
+  },[])
+
   return (
-    <div className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div className="w-full md:h-screen text-gray-300 bg-[#0a192f] pt-[65px]" name="projects">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         
         <div className="my-4">
@@ -13,7 +22,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4">
           
           <div style={{backgroundImage: `url(${FoodRecipe})`}} 
           className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
@@ -33,7 +42,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div style={{backgroundImage: `url(${Videogames})`}} 
+          <div style={{backgroundImage: `url(${SportPlanet})`}}
           className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
           items-center mx-auto content-div">
             <div className="opacity-0 group-hover:opacity-100">

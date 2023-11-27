@@ -23,13 +23,12 @@ const Contact = () => {
   },[])
 
   return (
-    <div className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-50">
+    <div className="w-full h-screen bg-[#0a192f] flex justify-center items-center pt-[65px]" name="contact">
       <form
         className="flex flex-col max-w-[600px] w-full"
         action="https://getform.io/f/04cbbda3-ff90-4bf5-8b99-820187e59c7c"
         method="POST"
       >
-        {console.log('esta es la info bro',info)}
         <div className="pb-8">
           <p className="text-4xl font-bold inline text-gray-300 border-b-4 border-[#d10070]">
             Contact
