@@ -1,0 +1,24 @@
+@url = http://localhost:3000/skills
+
+###
+GET {{url}}/
+
+###
+GET {{url}}/653e84086032821fc2ef5a68
+
+###
+POST {{url}}/
+Content-Type: application/json
+
+{
+    "name": "MongoDB",
+    "image": "https://res.cloudinary.com/santiagosdeb/image/upload/v1698611751/Portfolio/Skills/lwccaxmuizqgm1ln1ckl.png"
+}
+
+###
+PUT {{url}}/653ecdba7d0e12ac45563e03
+Content-Type: application/json
+
+{
+    "image": "https://res.cloudinary.com/santiagosdeb/image/upload/v1699999330/Portfolio/Skills/ghcvu0g5t7ywh0lonch0.png"
+}

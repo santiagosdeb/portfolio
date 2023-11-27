@@ -1,0 +1,28 @@
+@url = http://localhost:3000/projects
+
+### Get all projects
+GET {{url}}/
+
+### Get one project
+GET {{url}}/653aeb063551c38a8fb985aa
+
+### Post a project
+POST {{url}}/
+Content-Type: application/json
+
+{
+  "name": "Sport Planet - Market Place",
+  "title": "Sport Planet",
+  "image": "https://images.pexels.com/photos/3892129/pexels-photo-3892129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "skills": ["React", "Javascript", "Tailwind"],
+  "description": "E-commerce rediseñado en market place para que cualquiera este al alcance de comprar o vender elementos deportivos nuevos o usados",
+  "links": [ {"linkedin": "url-linkedin", "github": "url-github", "youtube": "url-youtube" } ]
+}
+
+### Update a project
+PUT {{url}}/653aeb063551c38a8fb985aa
+Content-Type: application/json
+
+{
+  "name": "Sport Planet - Market Place Nuevo :)"
+}
