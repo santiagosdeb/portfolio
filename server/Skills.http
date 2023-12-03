@@ -1,12 +1,12 @@
 @url = http://localhost:3000/skills
 
-###
+### Get all skills
 GET {{url}}/
 
-###
+### Get single skill
 GET {{url}}/653e84086032821fc2ef5a68
 
-###
+### Post skill
 POST {{url}}/
 Content-Type: application/json
 
@@ -15,7 +15,7 @@ Content-Type: application/json
     "image": "https://res.cloudinary.com/santiagosdeb/image/upload/v1698611751/Portfolio/Skills/lwccaxmuizqgm1ln1ckl.png"
 }
 
-###
+### Update skill
 PUT {{url}}/653ecdba7d0e12ac45563e03
 Content-Type: application/json
 

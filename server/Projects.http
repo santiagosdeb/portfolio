@@ -4,25 +4,28 @@
 GET {{url}}/
 
 ### Get one project
-GET {{url}}/653aeb063551c38a8fb985aa
+GET {{url}}/6566642b2633149d570c8976
 
 ### Post a project
 POST {{url}}/
 Content-Type: application/json
 
 {
-  "name": "Sport Planet - Market Place",
-  "title": "Sport Planet",
-  "image": "https://images.pexels.com/photos/3892129/pexels-photo-3892129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "skills": ["React", "Javascript", "Tailwind"],
-  "description": "E-commerce rediseñado en market place para que cualquiera este al alcance de comprar o vender elementos deportivos nuevos o usados",
-  "links": [ {"linkedin": "url-linkedin", "github": "url-github", "youtube": "url-youtube" } ]
+  "name": "Videogames",
+  "title": "Videogames",
+  "image": "https://res.cloudinary.com/santiagosdeb/image/upload/v1700522137/Portfolio/Projects/al05gqcp6f57kl9wxidp.png",
+  "skills": ["HTML", "CSS", "Javascript", "ReactJS", "Tailwind", "Responsive Web Design"],
+  "description": "Descripcion",
+  "links": [ {"CODE": "https://github.com/santiagosdeb/videogames", "VIDEO": "no hay aun", "DEPLOY": "no deploy" } ]
 }
 
 ### Update a project
-PUT {{url}}/653aeb063551c38a8fb985aa
+PUT {{url}}/6566642b2633149d570c8976
 Content-Type: application/json
 
 {
-  "name": "Sport Planet - Market Place Nuevo :)"
+  "image": "https://res.cloudinary.com/santiagosdeb/image/upload/v1700522136/Portfolio/Projects/lwrlnn05vwzzxcdruhue.jpg"
 }
+
+### Delete a project
+GET {{url}}/delete/653c24283551c38a8fb985ac

@@ -1,21 +1,20 @@
 import React, { useContext, useEffect } from "react";
-import FoodRecipe from "../assets/FoodRecipes.png";
-import Videogames from "../assets/Videogames.png";
-import SportPlanet from "../assets/SportPlanet.jpeg";
 import Context from "../context/context";
+import style from "../styles.module.css";
 
 const Projects = () => {
+  const { getProjects, projects } = useContext(Context);
 
-  const { getProjects, projects } = useContext(Context)
-
-  useEffect(()=>{
-    getProjects()
-  },[])
+  useEffect(() => {
+    getProjects();
+  }, []);
 
   return (
-    <div className="w-full md:h-screen text-gray-300 bg-[#0a192f] pt-[65px]" name="projects">
+    <div
+      className="w-full md:h-screen text-gray-300 bg-[#0a192f] pt-[65px]"
+      name="projects"
+    >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        
         <div className="my-4">
           <p className="text-4xl font-bold inline underline decoration-pink-600 decoration-4 text-gray-300">
             Projects
@@ -23,77 +22,43 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
-          
-          <div style={{backgroundImage: `url(${FoodRecipe})`}} 
-          className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
-          items-center mx-auto content-div">
-            <div className="opacity-0 group-hover:opacity-100">
-              <span>
-                <h2 className="text-red-500 text-center">FOOD RECIPES</h2>
-              </span>
-              <div>
-                <a href="/">
-                  <button className="text-black p-4">CODE</button>
-                </a>
-                <a href="/">
-                  <button className="text-black p-4">VIDEO</button>
-                </a>
+          {projects.map((project, key) => {
+            const bg = project.image;
+
+            return (
+              <div
+                key={key}
+                style={{ backgroundImage: `url(${bg})` }}
+                className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div h-[250px] overflow-hidden"
+              >
+                <div
+                  className="opacity-0 group-hover:opacity-100 h-full w-[90%]"
+                  key={project.id}
+                >
+                  <h2 className="text-3xl font-bold text-white mb-4 text-center">
+                    {project.title}
+                  </h2>
+                  <div className="max-h-[130px] overflow-y-auto scrollbar-project">
+                    <p>{project.description}</p>
+                  </div>
+                  <div className="flex justify-around gap-4">
+                    <a to={project.links[0].CODE}>
+                      {" "}
+                      <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 rounded-md">
+                        CODE
+                      </button>{" "}
+                    </a>
+                    <a to={project.links[0].VIDEO}>
+                      {" "}
+                      <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 rounded-md">
+                        VIDEO
+                      </button>{" "}
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${SportPlanet})`}}
-          className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
-          items-center mx-auto content-div">
-            <div className="opacity-0 group-hover:opacity-100">
-                <span>
-                  <h2 className="text-red-500 text-center">SPORT PLANET</h2>
-                </span>
-                <a href="/">
-                  <button className="text-black p-4">CODE</button>
-                </a>
-                <a href="/">
-                  <button className="text-black p-4">VIDEO</button>
-                </a>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${FoodRecipe})`}} 
-          className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
-          items-center mx-auto content-div">
-            <div className="opacity-0 group-hover:opacity-100">
-              <span>
-                <h2 className="text-red-500 text-center">Videogames</h2>
-              </span>
-              <div>
-                <a href="/">
-                  <button className="text-black p-4">CODE</button>
-                </a>
-                <a href="/">
-                  <button className="text-black p-4">VIDEO</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${Videogames})`}} 
-          className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center 
-          items-center mx-auto content-div">
-            <div className="opacity-0 group-hover:opacity-100">
-              <span>
-                <h2 className="text-red-500 text-center">Avengers</h2>
-              </span>
-              <div>
-                <a href="/">
-                  <button className="text-black p-4">CODE</button>
-                </a>
-                <a href="/">
-                  <button className="text-black p-4">VIDEO</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
+            );
+          })}
         </div>
       </div>
     </div>

@@ -66,20 +66,24 @@ const NavBar = () => {
         }
       >
         <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
-          {" "}
-          Home{" "}
+          <Link to="home" smooth={true} duration={500} onClick={() => setNav(false)}>
+            Home
+          </Link>
         </li>
         <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
-          {" "}
-          Skills{" "}
+          <Link to="skills" smooth={true} duration={500} onClick={() => setNav(false)}>
+            Skills
+          </Link>
         </li>
         <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
-          {" "}
-          Projects{" "}
+          <Link to="projects" smooth={true} duration={500} onClick={() => setNav(false)}>
+            Projects
+          </Link>
         </li>
         <li className="my-6 text-4xl cursor-pointer hover:underline hover:decoration-pink-600 hover:decoration-2">
-          {" "}
-          Contact{" "}
+          <Link to="contact" smooth={true} duration={500} onClick={() => setNav(false)}>
+            Contact
+          </Link>
         </li>
 
         <div className="w-full fixed bottom-0 pb-4">

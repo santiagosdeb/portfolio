@@ -45,7 +45,15 @@ router.put('/:id', async (req, res) => {
     };
 })
 
-// delete?
-// router.post('/:id')
+// delete
+router.get('/delete/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Project.findByIdAndDelete(id);
+        res.send(`${id} project was deleted`)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
 
 module.exports = router;

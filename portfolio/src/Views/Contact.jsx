@@ -59,7 +59,7 @@ const Contact = () => {
           value={info.message}
           onChange={changeHandler}
         />
-        <button className="text-white border-2 hover:bg-[#d10070] hover:border-[#d10070] px-6 py-3 my-8 mx-auto flex items-center">
+        <button className="text-white border-2 hover:bg-[#d10070] hover:border-[#d10070] px-6 py-3 my-8 mx-auto flex items-center rounded-md">
           Send Message
         </button>
       </form>

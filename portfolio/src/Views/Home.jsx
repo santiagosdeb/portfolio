@@ -29,7 +29,7 @@ const Home = () => {
         </p>
 
         <div>
-          <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group">
+          <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md">
             View More <span className="group-hover:rotate-90 duration-300"> <HiArrowNarrowRight className="ml-2"/> </span>
           </button>
         </div>

@@ -16,7 +16,6 @@ const State = (props) => {
 
   const getProjects = async () => {
     const res = await axios.get('http://localhost:3000/projects');
-    console.log(res.data);
     dispatch({
       type: GET_PROJECTS,
       payload: res.data
