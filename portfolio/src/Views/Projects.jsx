@@ -42,13 +42,13 @@ const Projects = () => {
                     <p>{project.description}</p>
                   </div>
                   <div className="flex justify-around gap-4">
-                    <a to={project.links[0].CODE}>
+                    <a href={project.links[0].CODE} target="_blank">
                       {" "}
                       <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 rounded-md">
                         CODE
                       </button>{" "}
                     </a>
-                    <a to={project.links[0].VIDEO}>
+                    <a href={project.links[0].VIDEO} target="_blank">
                       {" "}
                       <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 rounded-md">
                         VIDEO

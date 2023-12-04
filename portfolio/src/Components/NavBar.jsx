@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaBars,
   FaTimes,
@@ -11,11 +11,16 @@ import { HiOutlineMail } from "react-icons/hi";
 import CV from "../assets/SanchezdeBustamanteResume.pdf";
 import logo2 from "../assets/SdeBlogo.png";
 import logoTransparente from "../assets/SdeBLogoTransparente.png";
-import { Link } from "react-scroll";
+import { Link, Events } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [showSpan, setShowSpan] = useState(false);
+  const [showLink, setShowLink] = useState(false);
+  const [showWpp, setShowWpp] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+  const [showGithub, setShowGithub] = useState(false);
+  const [showResume, setShowResume] = useState(false);
 
   return (
     <div className="fixed w-full h-[65px] flex justify-between items-center bg-[#0a192f] text-gray-300 px-4 z-10">
@@ -34,12 +39,12 @@ const NavBar = () => {
           </Link>
         </li>
         <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
-        <Link to="skills" smooth={true} duration={500}>
+        <Link to="skills" smooth={true} duration={500} activeClass="underline">
           Skills
         </Link>
         </li>
         <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
-        <Link to="projects" smooth={true} duration={500}>
+        <Link to="projects" smooth={true} duration={500} activeClass="underline">
           Projects
         </Link>
         </li>
@@ -143,84 +148,77 @@ const NavBar = () => {
       </ul>
       {/* Menu on smaller devices */}
 
+
       {/* Social Media */}
       <div className="hidden xl:flex fixed flex-col top-[35%] left-0">
-        <ul
-          onMouseEnter={() => setShowSpan(true)}
-          onMouseLeave={() => setShowSpan(false)}
-        >
-          <li className="flex justify-between items-center bg-blue-600 p-2 cursor-pointer hover:scale-105 duration-300">
-            <a
-              className="flex justify-between items-center w-full text-gray-300 duration-300"
+        <ul>
+          <li className="w-[160px] flex justify-between items-center bg-blue-600 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
+            <a className="flex justify-between items-center w-full text-gray-300 duration-300"
               href="https://www.linkedin.com/in/santiago-a-sanchez-de-bustamante-9116531a2/"
               target="_blank"
             >
-              {showSpan && (
-                <span className="flex items-center justify-center px-5 font-bold text-gray-300 duration-300">
+                <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300`}>
                   Linkedin
                 </span>
-              )}
               <FaLinkedin size={32} />
             </a>
           </li>
 
-          <li className="flex justify-between items-center bg-[#333333] p-2 cursor-pointer hover:scale-105 duration-300">
+          <li className="w-[160px] flex justify-between items-center bg-[#333333] p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
             <a
               className="flex justify-between items-center w-full text-gray-300 duration-300"
               href="https://github.com/santiagosdeb"
               target="_blank"
-            >
-              {showSpan && (
-                <span className="flex items-center justify-center px-5 font-bold text-gray-300 duration-300">
+            >   
+                <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300`}>
                   Github
                 </span>
-              )}
               <FaGithub size={32} />
             </a>
           </li>
 
-          <li className="flex justify-between items-center bg-red-500 p-2 cursor-pointer hover:scale-105 duration-300">
+          <li className="w-[160px] flex justify-between items-center bg-red-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
             <a
-              className="flex justify-between items-center w-full text-gray-300 duration-300"
+              className="flex justify-between items-center w-full text-gray-300 duration-300 "
               href="mailto:santiagosanchezdeb@gmail.com"
               // aca puedo meter un link a la seccion "Contact"
               target="_blank"
             >
-              {showSpan && (
-                <span className="flex items-center justify-center px-5 font-bold text-gray-300 duration-300">
+              
+                <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300`}>
                   Email
                 </span>
-              )}
+           
               <HiOutlineMail size={32} />
             </a>
           </li>
 
-          <li className="flex justify-between items-center bg-green-500 p-2 cursor-pointer hover:scale-105 duration-300">
+          <li className="w-[160px] flex justify-between items-center bg-green-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
             <a
               className="flex justify-between items-center w-full text-gray-300 duration-300"
               href="https://wa.me/message/4VBSTH54ZKIAD1"
               target="_blank"
             >
-              {showSpan && (
-                <span className="flex items-center justify-center px-5 font-bold text-gray-300 duration-300">
+              
+                <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300 text-[14.5px]`}>
                   Whatsapp
                 </span>
-              )}
+             
               <FaWhatsapp size={32} />
             </a>
           </li>
-
-          <li className="flex justify-between items-center bg-[#565f69] p-2 cursor-pointer hover:scale-105 duration-300">
+          
+          <li className="w-[160px] flex justify-between items-center bg-[#565f69] p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
             <a
               className="flex justify-between items-center w-full text-gray-300 duration-300"
               href={CV}
               target="_blank"
             >
-              {showSpan && (
-                <span className="flex items-center justify-center px-5 text-gray-300 duration-300">
+              
+                <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300`}>
                   Resume
                 </span>
-              )}
+              
               <FaFileAlt size={32} />
             </a>
           </li>
