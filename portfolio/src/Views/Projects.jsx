@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import Context from "../context/context";
-import style from "../styles.module.css";
 
 const Projects = () => {
   const { getProjects, projects } = useContext(Context);
@@ -16,9 +15,9 @@ const Projects = () => {
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="my-4">
-          <p className="text-4xl font-bold inline underline decoration-pink-600 decoration-4 text-gray-300">
+          <h2 className="text-4xl font-bold inline underline decoration-pink-600 decoration-4 text-gray-300">
             Projects
-          </p>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
