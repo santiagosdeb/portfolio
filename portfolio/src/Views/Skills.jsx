@@ -1,13 +1,7 @@
-import React, { useEffect, useContext } from 'react';
-import Context from '../context/context';
+import React from 'react';
+import { skills } from '../data/skills'
 
 const Skills = () => {
-
-    const { getSkills, skills } = useContext(Context);
-
-    useEffect(() => {
-        getSkills();
-    }, []);
 
   return (
     <div className='w-full h-full bg-[#0a192f] text-gray-300 pt-[65px]' name="skills">

@@ -1,12 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import Context from "../context/context";
+import React from "react";
+import { projects } from '../data/projects'
 
 const Projects = () => {
-  const { getProjects, projects } = useContext(Context);
-
-  useEffect(() => {
-    getProjects();
-  }, []);
 
   return (
     <div
