@@ -219,6 +219,11 @@ const NavBar = () => {
         </ul>
       </div>
       {/* Social Media */}
+
+      {/* <div className="hidden md:flex fixed right-[2%] bottom-[5%]">
+        <button className="w-[55px] h-[55px] bg-white rounded-full"></button>
+      </div> */}
+      
     </div>
   );
 };

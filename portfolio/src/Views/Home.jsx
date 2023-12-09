@@ -26,15 +26,17 @@ const Home = () => {
         experiencia en desarrollo web y de aplicaciones para manejarlos de manera efectiva.*/}
 
         <div>
-          <Link to="skills" smooth={true} duration={500}>
-            <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md">
+          
+            {/* <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md"> */}
+            <Link to="skills" smooth={true} duration={500} className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md w-[160px] cursor-pointer">
               View More{" "}
               <span className="group-hover:rotate-90 duration-300">
                 {" "}
                 <HiArrowNarrowRight className="ml-2" />{" "}
               </span>
-            </button>
-          </Link>
+            </Link>
+            {/* </button> */}
+          
         </div>
       </div>
     </div>
