@@ -1,14 +1,6 @@
 import React, { useState } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFileAlt,
-  FaWhatsapp,
-} from "react-icons/fa";
 import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
-import CV from "../assets/SanchezdeBustamanteResume.pdf";
+import { Link } from "react-scroll";
 
 const Home = () => {
   const [showSpan, setShowSpan] = useState(false);
@@ -24,18 +16,27 @@ const Home = () => {
           Full Stack Developer
         </h2>
         <p className="py-4 text-[#8892b0] max-w-[700px]">
-          Aca podría llegar a ir algun texto de introduccion o contar algo sobre
-          mi pero no se como quedaria y ahora tengo que agregar boludeces para ver como queda. Booooooocaaa boccaaaaa bo oo oooooo ooocaaaaaaaaaaaaaaaaa boca boca boca boca boca 2 palmeiras 0
+          Focused on solving problems with creativity, and continuously seeking
+          to expand my skills in this area. I find inspiration in complex
+          challenges, leveraging my expertise in web and application development
+          to handle them effectively.
         </p>
+        {/* Enfocado en resolver problemas con creatividad, y buscando continuamente ampliar mis 
+        habilidades en esta área. Encuentro inspiración en desafíos complejos, aprovechando mi
+        experiencia en desarrollo web y de aplicaciones para manejarlos de manera efectiva.*/}
 
         <div>
-          <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md">
-            View More <span className="group-hover:rotate-90 duration-300"> <HiArrowNarrowRight className="ml-2"/> </span>
-          </button>
+          <Link to="skills" smooth={true} duration={500}>
+            <button className="flex items-center text-white border-2 px-6 py-3 my-2 hover:bg-pink-600 hover:border-pink-600 group rounded-md">
+              View More{" "}
+              <span className="group-hover:rotate-90 duration-300">
+                {" "}
+                <HiArrowNarrowRight className="ml-2" />{" "}
+              </span>
+            </button>
+          </Link>
         </div>
-
       </div>
-      
     </div>
   );
 };

@@ -15,12 +15,6 @@ import { Link, Events } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [showSpan, setShowSpan] = useState(false);
-  const [showLink, setShowLink] = useState(false);
-  const [showWpp, setShowWpp] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
-  const [showGithub, setShowGithub] = useState(false);
-  const [showResume, setShowResume] = useState(false);
 
   return (
     <div className="fixed w-full h-[65px] flex justify-between items-center bg-[#0a192f] text-gray-300 px-4 z-10">
