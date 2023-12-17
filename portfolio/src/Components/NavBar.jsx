@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FaBars,
   FaTimes,
@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import CV from "../assets/SanchezdeBustamanteResume.pdf";
-import logo2 from "../assets/SdeBlogo.png";
 import logoTransparente from "../assets/SdeBLogoTransparente.png";
-import { Link, Events } from "react-scroll";
+import { Link } from "react-scroll";
+import us from '../assets/us.png';
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -221,7 +221,7 @@ const NavBar = () => {
       {/* Social Media */}
 
       {/* <div className="hidden md:flex fixed right-[2%] bottom-[5%]">
-        <button className="w-[55px] h-[55px] bg-white rounded-full"></button>
+        <button style={{ backgroundImage: `url(${us})` }} className="w-[60px] h-[60px] bg-cover bg-no-repeat bg-center rounded-full"></button>
       </div> */}
       
     </div>

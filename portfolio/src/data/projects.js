@@ -64,7 +64,7 @@ export const projects = [
         links: [
           {
             CODE: "https://github.com/santiagosdeb/videogames",
-            VIDEO: "no hay aun",
+            VIDEO: "https://www.youtube.com/watch?v=N31czbI3IV0",
             DEPLOY: "no deploy"
           }
         ]
