@@ -8,7 +8,8 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import CV from "../assets/SanchezdeBustamanteResume.pdf";
+// import CV from "../assets/SanchezdeBustamanteResume.pdf";
+import CV from "../assets/CV-SanchezdeBustamanteSantiago.pdf";
 import logoTransparente from "../assets/SdeBLogoTransparente.png";
 import { Link } from "react-scroll";
 import us from '../assets/us.png';
