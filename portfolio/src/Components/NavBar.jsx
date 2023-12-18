@@ -24,7 +24,7 @@ const NavBar = () => {
         <img
           src={logoTransparente}
           alt="Logo"
-          className={nav ? "hidden" : "w-[110px] md:w-[130px] 2xl:w-[200px]"}
+          className={nav ? "hidden" : "w-[110px] md:w-[130px] 2xl:w-[200px] cursor-pointer"}
         />
       </Link>
       </div>
