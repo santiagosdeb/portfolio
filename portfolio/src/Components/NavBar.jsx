@@ -20,11 +20,13 @@ const NavBar = () => {
   return (
     <div className="fixed w-full h-[65px] flex justify-between items-center bg-[#0a192f] text-gray-300 px-4 z-10">
       <div>
+      <Link to="home" smooth={true} duration={500}>
         <img
           src={logoTransparente}
           alt="Logo"
           className={nav ? "hidden" : "w-[110px] md:w-[130px] 2xl:w-[200px]"}
         />
+      </Link>
       </div>
 
       {/* Pages */}
