@@ -27,6 +27,7 @@ const NavBar = () => {
         />
       </div>
 
+      {/* Pages */}
       <ul className="hidden md:flex">
         <li className="mx-4 cursor-pointer text-lg hover:underline hover:decoration-pink-600 hover:decoration-2">
           <Link to="home" smooth={true} duration={500}>
@@ -49,6 +50,7 @@ const NavBar = () => {
         </Link>
         </li>
       </ul>
+      {/* Pages */}
 
       <div
         className="md:hidden z-10 mr-4 cursor-pointer"
@@ -173,19 +175,15 @@ const NavBar = () => {
           </li>
 
           <li className="w-[160px] flex justify-between items-center bg-red-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
-            <a
-              className="flex justify-between items-center w-full text-gray-300 duration-300 "
-              href="mailto:santiagosanchezdeb@gmail.com"
-              // aca puedo meter un link a la seccion "Contact"
-              target="_blank"
-            >
+            <Link to="contact" smooth={true} duration={500}
+              className="flex justify-between items-center w-full text-gray-300 duration-300">
               
                 <span className={`flex items-center justify-center px-5 font-bold text-gray-300 duration-300`}>
                   Email
                 </span>
            
               <HiOutlineMail size={32} />
-            </a>
+            </Link>
           </li>
 
           <li className="w-[160px] flex justify-between items-center bg-green-500 p-2 cursor-pointer hover:scale-105 duration-300 rounded-xl my-[4px] ml-[-100px] hover:ml-[-10px]">
