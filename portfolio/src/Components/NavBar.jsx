@@ -10,7 +10,8 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 // import CV from "../assets/SanchezdeBustamanteResume.pdf";
 import CV from "../assets/CV-SanchezdeBustamanteSantiago.pdf";
-import logoTransparente from "../assets/SdeBLogoTransparente.png";
+// import logo from "../assets/SdeBLogoTransparente.png";
+import logo from "../assets/SdeBLogoTransparenteRecortado.png";
 import { Link } from "react-scroll";
 import us from '../assets/us.png';
 
@@ -22,7 +23,7 @@ const NavBar = () => {
       <div>
       <Link to="home" smooth={true} duration={500}>
         <img
-          src={logoTransparente}
+          src={logo}
           alt="Logo"
           className={nav ? "hidden" : "w-[110px] md:w-[130px] 2xl:w-[200px] cursor-pointer"}
         />
